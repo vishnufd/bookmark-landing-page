@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Bookmark landing page</title>
+</head>
+<body class="text-dark_blue text-[18px]">
+
+<!-- heading section -->
+<header class="container mx-auto">
+  <nav class="flex flex-row items-center justify-between px-5 py-7 mx-3.5 sm:mx-0">
+    <div>
+      <img class="w-[120px] md:w-[148px]" src="./images/logo-bookmark.svg" alt="logo">
+    </div>
+    <!-- navigation menu -->
+    <div>
+      <!-- hamburger menu -->
+      <div class="block sm:hidden hover:cursor-pointer" id="ham-menu">
+        <img class="w-5" src="./images/icon-hamburger.svg" alt="hamburger menu">
+      </div>
+      <!-- mobile nav menu -->
+       <div class="hidden fixed md:hidden inset-0 bg-dark_blue bg-opacity-95 px-8 py-6 backdrop-blur-sm z-20 h-[100%] w-[100%]" id="mobile-menu">
+        <div class="flex items-center justify-between">
+          <img class="w-[150px]" src="./images/logo-mobile.svg" alt="logo">
+          <img class="w-[20px] hover:cursor-pointer" id="close-menu" src="./images/icon-close.svg" alt="close hamburger menu">
+        </div>
+       <div class="h-full flex flex-col justify-around">
+        <div class="text-center">
+          <ul class="flex flex-col items-center w-full" id="mobile-nav">
+            <li class="py-5 border-t border-gray_color w-full"><a class="uppercase text-white font-normal text-2xl tracking-[2px]" href="#feat">Features</a></li>
+            <li class="py-5 border-t border-gray_color w-full"><a class="uppercase text-white font-normal text-2xl tracking-[2px]" href="#">Pricing</a></li>
+            <li class="py-5 border-t border-gray_color w-full"><a class="uppercase text-white font-normal text-2xl tracking-[2px]" href="#">Contact</a></li>
+            <li class="border-t border-gray_color w-full"><button class="mt-7 w-full text-2xl font-medium bg-transparent text-white px-7 py-2 rounded-[4px] uppercase border-2 border-white tracking-[3px]" type="button" value="Login">Login</button></li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center gap-x-12 ">
+          <img src="./images/icon-facebook.svg" alt="facebook link">
+          <img src="./images/icon-twitter.svg" alt="twitter link">
+        </div>
+       </div>
+       </div>
+      <!--mobile nav menu ends  -->
+      <ul class="hidden items-center gap-3 md:gap-10 no-underline list-none sm:flex">
+        <li><a href="#feat" class="text-[12px] md:text-[15px] uppercase font-medium hover:text-red_color">Features</a></li>
+        <li><a href="#" class="text-[12px] md:text-[15px] uppercase font-medium hover:text-red_color">Pricing</a></li>
+        <li><a href="#" class="text-[12px] md:text-[15px] uppercase font-medium hover:text-red_color">Contact</a></li>
+        <li><button class="text-[12px] md:text-[15px] font-medium bg-red_color text-white px-7 py-2 rounded-[4px] uppercase border-2 hover:border-2 border-red_color hover:bg-transparent hover:text-red_color shadow-lg" type="button" value="Login">Login</button></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- hero section -->
+ <section class="container mx-auto">
+    <div class="flex items-center flex-col-reverse sm:flex-row justify-between mt-10 px-5 py-7">
+    <!-- details section -->
+    <div class="max-w-[540px] mt-10 sm:mt-0">
+      <h1 class="text-3xl md:text-5xl text-center sm:text-left font-bold leading-[1.2]">A Simple Bookmark Manager</h1>
+      <p class="text-[16px] md:text-[18px] text-center sm:text-left my-6 font-normal text-gray_color">A clean and simple interface to organize your favorite websites. Open a new 
+      browser tab and see your sites load instantly. Try it for free.</p>
+      <div class="my-10 flex gap-x-6 sm:justify-start justify-center">
+        <button class="px-7 py-3 text-[12px] sm:px-3 sm:py-2 sm:text-[7px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg" type="button" value="Login">Get it on Chrome</button>
+        <button class="px-7 py-3 text-[12px] sm:px-3 sm:py-2 text-nowrap sm:text-[7px] md:text-[15px] font-medium bg-[#f7f7f7] text-dark_blue md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-[#f7f7f7] hover:bg-transparent hover:text-dark_blue hover:border-dark_blue shadow-lg" type="button" value="Login">Get it on Firefox</button>
+      </div>
+    </div>
+    <!-- image section -->
+    <div class="relative">
+      <img class="relative z-10 mr-10" src="./images/illustration-hero.svg" alt="hero image">
+      <div class="absolute h-[130px] w-[250px] top-[7.5rem] xl:h-[352px] sm:w-[150px] sm:h-[100px] sm:top-11 md:w-[200px] md:h-[150px] md:top-16 lg:w-[300px] lg:h-[200px] lg:top-24 xl:w-[500px] right-0 xl:top-32 rounded-tl-[35rem] rounded-bl-[35rem] bg-blue_color"></div>
+    </div>
+    </div>
+ </section>
+
+ <!-- Features section -->
+  <section class="container mx-auto -scroll-mt-52" id="feat">
+    <div class="flex justify-between flex-col items-center sm:mt-10 px-5 py-2 sm:py-7">
+      <!-- Features details -->
+       <div class="max-w-[560px] text-center">
+        <h2 class="my-6 text-[30px] md:text-[36px] font-semibold">Features</h2>
+        <p class="text-gray_color font-normal text-[16px] md:text-[18px]">Our aim is to make it quick and easy for you to access your favorite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.</p>
+       </div>
+       <!-- Tab navigation -->
+       <div class="tab-section mt-16"><hr class="sm:hidden">
+          <div class="tabs flex justify-center items-center flex-col md:flex-row sm:border-b sm:border-gray_color space-x-reverse md:space-x-20">
+            <p class="active w-[190px] lg:w-[200px] text-center py-5 sm:py-7"><a class="font-medium cursor-pointer hover:text-red_color">Simple Bookmarking</a></p>
+            <p class="w-[190px] lg:w-[200px] text-center py-5 sm:py-7"><a class="font-medium cursor-pointer hover:text-red_color">Speedy Searching</a></p>
+            <p class="w-[190px] lg:w-[200px] text-center py-5 sm:py-7"><a class="font-medium cursor-pointer hover:text-red_color">Easy Sharing</a></p>
+          </div><hr class="sm:hidden">
+          <div class="tab-content mt-20">
+            <div class="active flex justify-between items-center flex-col md:flex-row relative tab none">
+              <div class="xl:-ml-48 relative">
+                <img class="relative z-10 mr-10" src="./images/illustration-features-tab-1.svg" alt="hero image">
+                <div class="absolute h-[130px] w-[250px] top-[9rem] xl:h-[320px] sm:w-[300px] sm:h-[180px] sm:top-36 md:w-[200px] md:h-[150px] md:top-16 lg:w-[300px] lg:h-[200px] lg:top-36 xl:w-[800px] xl:-ml-80 -left-10 xl:top-20 rounded-tl-[35rem] rounded-bl-[35rem] bg-blue_color rotate-180"></div>
+              </div>
+              <div class="max-w-[375px] md:ml-20 mt-14 md:mt-0">
+                <h2 class="my-6 text-3xl md:text-4xl font-semibold text-center md:text-left">Bookmark in one click</h2>
+                <p class="font-normal text-gray_color text-center md:text-left">Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                  gives you complete control over how you manage your favorite sites.</p>
+                  <button class="hidden md:block px-7 py-3 text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">More info</button>
+              </div>
+            </div>
+
+            <!-- second tab -->
+            <div class="flex justify-between items-center flex-col md:flex-row relative none tab">
+              <div class="xl:-ml-48 relative">
+                <img class="relative z-10 mr-10" src="./images/illustration-features-tab-1.svg" alt="hero image">
+                <div class="absolute h-[130px] w-[250px] top-[9rem] xl:h-[320px] sm:w-[300px] sm:h-[180px] sm:top-36 md:w-[200px] md:h-[150px] md:top-16 lg:w-[300px] lg:h-[200px] lg:top-36 xl:w-[800px] xl:-ml-80 -left-10 xl:top-20 rounded-tl-[35rem] rounded-bl-[35rem] bg-blue_color rotate-180"></div>
+              </div>
+              <div class="max-w-[375px] md:ml-20  mt-14 md:mt-0">
+                <h2 class="my-6 text-3xl md:text-4xl font-semibold text-center md:text-left">Intelligent search</h2>
+                <p class="font-normal text-gray_color text-center md:text-left">Our powerful search feature will help you find saved sites in no time at all. 
+                  No need to trawl through all of your bookmarks.</p>
+                <button class="hidden md:block px-7 py-3 text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">More info</button>
+              </div>
+            </div>
+
+            <!-- third tab -->
+            <div class="flex justify-between items-center flex-col md:flex-row relative none tab">
+              <div class="xl:-ml-48 relative">
+                <img class="relative z-10 mr-10" src="./images/illustration-features-tab-1.svg" alt="hero image">
+                <div class="absolute h-[130px] w-[250px] top-[9rem] xl:h-[320px] sm:w-[300px] sm:h-[180px] sm:top-36 md:w-[200px] md:h-[150px] md:top-16 lg:w-[300px] lg:h-[200px] lg:top-36 xl:w-[800px] xl:-ml-80 -left-10 xl:top-20 rounded-tl-[35rem] rounded-bl-[35rem] bg-blue_color rotate-180"></div>
+              </div>
+              <div class="max-w-[375px] md:ml-20  mt-14 md:mt-0">
+                <h2 class="my-6 text-3xl md:text-4xl font-semibold text-center md:text-left">Share your bookmarks</h2>
+                <p class="font-normal text-gray_color text-center md:text-left">Easily share your bookmarks and collections with others. Create a shareable 
+                  link that you can send at the click of a button.</p>
+                  <button class="hidden md:block px-7 py-3 text-[12px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">More info</button>
+              </div>
+            </div>
+          </div>
+       </div>
+    </div>
+  </section>
+
+  <!-- Download section -->
+   <section class="container mx-auto mt-10 md:mt-28">
+    <div class="flex justify-center flex-col items-center sm:mt-10 px-5 py-2 sm:py-7">
+      <div class="max-w-[560px] text-center">
+        <h2 class="my-6 text-[30px] md:text-[36px] font-semibold">Download the extension</h2>
+        <p class="text-gray_color font-normal text-[16px] md:text-[18px]">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favorite you’d like us to prioritize.</p>
+       </div>
+       <!-- card section -->
+      <div class="flex my-16 lg:gap-10 max-w-full md:gap-[0.5rem] md:flex-row flex-col">
+        <!-- card 1 -->
+         <div class="w-[280px] flex items-center justify-center flex-col py-7 rounded-xl relative card">
+            <img src="./images/logo-chrome.svg" alt="chrome">
+            <h3 class="mt-5 text-2xl font-medium">Add to Chrome</h3>
+            <p class="mt-1 mb-5 text-[15px] text-gray_color">Minimum version 62</p>
+            <img class="absolute top-[70%]" src="./images/bg-dots.svg" alt="dots">
+            <button class="px-7 py-3 text-[12px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">Add & Install Extension</button>
+         </div>
+
+         <!-- card 2 -->
+         <div class="w-[280px] flex items-center justify-center flex-col py-7 rounded-xl relative card top-10">
+          <img src="./images/logo-firefox.svg" alt="chrome">
+          <h3 class="mt-5 text-2xl font-medium">Firefox</h3>
+          <p class="mt-1 mb-5 text-[15px] text-gray_color">Minimum version 55</p>
+          <img class="absolute top-[70%]" src="./images/bg-dots.svg" alt="dots">
+          <button class="px-7 py-3 text-[12px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">Add & Install Extension</button>
+       </div>
+
+        <!-- card 3 -->
+        <div class="w-[280px] flex items-center justify-center flex-col py-7 rounded-xl relative card top-20">
+          <img src="./images/logo-opera.svg" alt="chrome">
+          <h3 class="mt-5 text-2xl font-medium">Opera Mini</h3>
+          <p class="mt-1 mb-5 text-[15px] text-gray_color">Minimum version 46</p>
+          <img class="absolute top-[70%]" src="./images/bg-dots.svg" alt="dots">
+          <button class="px-7 py-3 text-[12px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">Add & Install Extension</button>
+      </div>
+      </div>
+    </div>
+   </section>
+
+   <!-- FAQ section -->
+   <section class="container mx-auto my-20">
+    <div class="flex justify-center flex-col items-center sm:mt-10 px-5 py-2 sm:py-7">
+      <div class="max-w-[560px] text-center">
+        <h2 class="my-6 text-[30px] md:text-[36px] font-semibold">Frequently Asked Questions</h2>
+        <p class="text-gray_color font-normal text-[16px] md:text-[18px]">Here are some of our FAQs. If you have any other questions you’d like 
+        answered please feel free to email us.</p>
+        <!-- QA section -->
+       <div class="max-w-full my-10">
+        <div class="flex justify-between flex-col items-center cursor-pointer hover:text-red_color py-4 border-t-[1px] border-b-[1px] border-gray-300" id="questions">
+          <div class="flex justify-between flex-row items-center w-full">
+            <p class="font-semibold text-[16px] sm:text-[18px]">What is Bookmark?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" id="arrow" /></svg>
+          </div>
+          <!-- hidden answers -->
+          <div class="hidden py-7" id="hidden-answer">
+            <p class="text-left text-gray_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
+        </div>
+
+        <!-- section 2 -->
+        <div class="flex justify-between flex-col items-center cursor-pointer hover:text-red_color py-4 border-t-[1px] border-b-[1px] border-gray-300" id="questions">
+          <div class="flex justify-between flex-row items-center w-full">
+            <p class="font-semibold text-[16px] sm:text-[18px]">How can I request a new browser?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" id="arrow" /></svg>
+          </div>
+          <!-- hidden answers -->
+          <div class="hidden py-7" id="hidden-answer">
+            <p class="text-left text-gray_color">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          </div>
+        </div>
+
+         <!-- section 3 -->
+         <div class="flex justify-between flex-col items-center cursor-pointer hover:text-red_color py-4 border-t-[1px] border-b-[1px] border-gray-300" id="questions">
+          <div class="flex justify-between flex-row items-center w-full">
+            <p class="font-semibold text-[16px] sm:text-[18px]">Is there a mobile app?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" id="arrow" /></svg>
+          </div>
+          <!-- hidden answers -->
+          <div class="hidden py-7" id="hidden-answer">
+            <p class="text-left text-gray_color">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+              sollicitudin ex et ultricies bibendum.</p>
+          </div>
+        </div>
+
+         <!-- section 4 -->
+         <div class="flex justify-between flex-col items-center cursor-pointer hover:text-red_color py-4 border-t-[1px] border-b-[1px] border-gray-300" id="questions">
+          <div class="flex justify-between flex-row items-center w-full">
+            <p class="font-semibold text-[16px] sm:text-[18px]">What about other Chromium browsers?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" id="arrow" /></svg>
+          </div>
+          <!-- hidden answers -->
+          <div class="hidden py-7" id="hidden-answer">
+            <p class="text-left text-gray_color">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+              vitae neque eget nisl gravida pellentesque non ut velit.</p>
+          </div>
+        </div>
+       </div>
+      </div>
+      <button class="px-7 py-3 text-[12px] text-nowrap md:text-[15px] font-medium bg-blue_color text-white md:px-7 md:py-3 rounded-[4px] border-2 hover:border-2 border-blue_color hover:bg-transparent hover:text-blue_color shadow-lg mt-10" type="button" value="Login">More info</button>
+    </div>
+   </section>
+
+   <!-- contact section -->
+  <div class="bg-blue_color w-full pb-[95px] md:pb-0">
+  <section class="container mx-auto relative md:static">
+    <div class="flex justify-center flex-col items-center px-5 py-2 sm:py-7">
+      <div class="my-10 text-center max-w-[520px]">
+        <p class="uppercase text-white text-[15px] font-semibold tracking-[5px]">35,000+ already joined</p>
+        <h2 class="text-4xl font-semibold my-8 text-white">Stay up-to-date with what we’re doing</h2>
+        <div>
+          <div class="flex flex-col md:flex-row justify-center items-center pb-10 md:pb-0 gap-10 md:gap-5">
+            <div class="flex items-center bg-white rounded-md px-4 md:static relative z-10" id="mail">
+              <input class="px-3 py-3 w-[300px] rounded-md outline-none" type="email" id="email" placeholder="Enter your email address" required>
+              <img class="hidden" src="./images/icon-error.svg" alt="" id="error-icon">
+            </div>
+            <button class=" px-7 py-3 w-[335px] md:w-auto text-[12px] text-nowrap md:text-[15px] font-medium bg-red_color text-white md:px-7 md:py-3 border-2 hover:border-2 border-red_color hover:bg-white hover:text-red_color rounded-md" type="button" value="Login" id="contact-btn">Contact Us</button>
+          </div>
+          <div class="hidden sm:block absolute md:static md:top-0 md:left-0 top-[277px] left-[56px] z-[3]">
+            <p class="hidden bg-red_color text-white italic w-[351px] ml-[8px] pt-3 -mt-[0] md:-mt-[7px] text-[10px] font-semibold py-2 rounded-md text-left px-3" id="error-msg">Whoops, make sure it's an email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ml-[0px] sm:ml-[37px] -mt-[135px] md:ml-0 md:-mt-0 w-fit -->
+  <!-- footer section -->
+  <div class="w-full bg-dark_blue py-10 md:py-0">
+    <section class="container mx-auto">
+      <div class="flex justify-between flex-col md:flex-row items-center px-5 py-2 sm:py-7 text-white">
+        <div class="flex flex-col justify-center items-center gap-y-8 md:gap-y-0 md:flex-row md:gap-20">
+          <img class="w-[148px]" src="./images/logo-footer.svg" alt="logo">
+          <ul class="flex items-center flex-col md:flex-row gap-y-5 md:gap-16">
+            <li><a class="hover:text-red_color uppercase text-[14px] tracking-[2px] font-semibold" href="">Features</a></li>
+            <li><a class="hover:text-red_color uppercase text-[14px] tracking-[2px] font-semibold" href="">Pricing</a></li>
+            <li><a class="hover:text-red_color uppercase text-[14px] tracking-[2px] font-semibold" href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center gap-x-12 pt-10 md:pt-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="hover:fill-red_color hover:cursor-pointer" fill="#FFF" fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path class="hover:fill-red_color hover:cursor-pointer" fill="#FFF" fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg>
+        </div>
+      </div>
+    </section>
+   </div>
+</body>
+</html>

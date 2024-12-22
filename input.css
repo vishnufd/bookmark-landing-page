@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tabs .active {
+    border-bottom: 4px solid hsl(0, 94%, 66%);
+}
+
+.tab-content .none {
+    display: none;
+}
+
+.tab-content .active {
+    display: flex;
+}
+
+.card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body.ham {
+    overflow-y: scroll;
+    position: fixed;
+}
